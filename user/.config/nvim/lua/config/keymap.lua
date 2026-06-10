@@ -1,0 +1,12 @@
+vim.keymap.set({"i", "n"}, "<C-e>", ":NvimTreeToggle<CR>")
+vim.keymap.set({"i", "n"}, "<C-j>", ":ToggleTerm<CR>")
+
+vim.keymap.set("n", "<A-1>", ":BufferLineGoToBuffer 1<CR>")
+vim.keymap.set("n", "<A-2>", ":BufferLineGoToBuffer 2<CR>")
+vim.keymap.set("n", "<A-3>", ":BufferLineGoToBuffer 3<CR>")
+vim.keymap.set("n", "<A-4>", ":BufferLineGoToBuffer 4<CR>")
+vim.keymap.set("n", "<A-5>", ":BufferLineGoToBuffer 5<CR>")
+vim.keymap.set("n", "<A-6>", ":BufferLineGoToBuffer 6<CR>")
+vim.keymap.set("n", "<A-7>", ":BufferLineGoToBuffer 7<CR>")
+vim.keymap.set("n", "<A-8>", ":BufferLineGoToBuffer 8<CR>")
+vim.keymap.set("n", "<A-9>", ":BufferLineGoToBuffer 9<CR>")

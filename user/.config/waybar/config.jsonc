@@ -1,0 +1,99 @@
+{
+    "reload_style_on_change": true,
+    "position": "top",
+    "height": 30,
+    "margin-bottom": 0,
+    "spacing": 14,
+
+    "modules-left":   ["niri/workspaces", "niri/language", "wireplumber", "backlight", "temperature"],
+    "modules-center": ["clock"],
+    "modules-right":  ["group/hardware", "group/session"],
+
+
+    // --- Groups ---
+    "group/hardware": {
+        "orientation": "horizontal",
+        "spacing": 10,
+        "modules": ["battery", "memory", "cpu"]
+    },
+
+    "group/session": {
+        "orientation": "horizontal",
+        "modules": ["custom/hibernate", "custom/sleep", "custom/poweroff"]
+    },
+
+    // --- Power Modules ---
+    "custom/poweroff": {
+        "format": " ",
+        "tooltip-format": "Poweroff",
+        "on-click": "systemctl poweroff"
+    },
+
+    "custom/sleep": {
+        "format": " ",
+        "tooltip-format": "Sleep mode (Suspend to RAM)",
+        "on-click": "systemctl suspend"
+    },
+
+    "custom/hibernate": {
+        "format": " ",
+        "tooltip-format": "Hibernation (Suspend to Disk)",
+        "on-click": "systemctl hibernate"
+    },
+
+    // --- Utilities ---
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 {volume}%",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "format-icons": ["\uf026", "\uf027", "\uf028"],
+        "tooltip-format": "Volume: {volume}%"
+    },
+
+    "backlight": {
+        "format": "󰖨 {percent}%",
+        "tooltip-format": "Яркость экрана: {percent}%"
+    },
+
+    // --- System Info ---
+    "clock": {
+        "format": "󰔟 {:%H:%M / %d.%m.%Y}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "niri/language": {
+        "format": "󰌌 {short}",
+        "tooltip-format": "Current layout: {layout}"
+    },
+
+    // --- Resources ---
+    "memory": {
+        "format": " {used:0.1f}G",
+        "tooltip-format": "User: {used:0.1f}GiB\nAvailable: {avail:0.1f}GiB\nTotal: {total:0.1f}GiB"
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip-format": "Processor usage: {usage}%"
+    },
+    "temperature": {
+        "format": "󰏈 {temperatureC}°C",
+        "interval": 5,
+        "warning-threshold": 70,
+        "critical-threshold": 80
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "states": {
+            "good": 100,
+            "medium": 50,
+            "warning": 35,
+            "critical": 20
+        },
+        "format-icons": {
+            "default":  ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+            "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+        },
+        "tooltip-format": "{timeTo} ({capacity}%)"
+    }
+}

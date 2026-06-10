@@ -1,0 +1,82 @@
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+    color: #ebdbb2;
+}
+window#waybar {
+    background-color: #1d2021;
+}
+
+/* --- Groups --- */
+#session .module {
+    padding: 0 5px;
+}
+#hardware .module {
+    padding: 0 6px;
+}
+#sys-toggles .module {
+    padding: 0 5px;
+}
+
+/* --- Module Workspaces --- */
+#workspaces button {
+    padding: 0px 18px;
+    border-radius: 0;
+}
+#workspaces button.active {
+    background-color: #ff721b;
+}
+#workspaces button:hover {
+    background: #3c3836;
+}
+#workspaces button label {
+    font-size: 16px;
+}
+
+ /* --- Group sys-power --- */
+#custom-poweroff {
+   color: #FB4934;
+}
+#custom-sleep {
+   color: #D79921;
+}
+#custom-hibernate {
+    color: rgba(0, 255, 255, 0.505);
+}
+
+/* --- Group sys-info --- */
+#cpu {
+   color: #689D6A;
+}
+#memory {
+   color: #B16286;
+}
+#wireplumber {
+   color: #458588;
+}
+#language{
+   color: rgb(177,98,134);
+}
+/* -- Module Battery -- */
+#battery.good {
+    color: #98971A;
+}
+#battery.medium {
+    color: #689D6A;
+}
+#battery.warning {
+    color: #D79921;
+}
+#battery.critical {
+    color: #CC241D;
+}
+/* -- Module Temperature --  */
+#temperature {
+    color: #98971A;
+}
+#temperature.warning {
+    color: rgb(215,153,33);
+}
+#temperature.critical {
+    color: rgb(204,36,29);
+}
