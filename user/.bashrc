@@ -65,3 +65,11 @@ audio_download() {
         [[ -z "$url" ]] && return
         download "a" "$url"
 }
+
+# uv
+export PATH="/home/sanchez/.local/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/sanchez/.lmstudio/bin"
+# End of LM Studio CLI section
+
