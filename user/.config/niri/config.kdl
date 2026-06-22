@@ -229,7 +229,7 @@ binds {
     Mod+E hotkey-overlay-title="Open file manager: Nautilus" { spawn "nautilus"; }
 
     // Menus
-    Alt+L hotkey-overlay-title="Open App Launcher" { spawn "fuzzel"; }
+    Alt+D hotkey-overlay-title="Open App Launcher" { spawn "fuzzel"; }
     Alt+E hotkey-overlay-title="Open Emoji Menu" { spawn-sh "$HOME/.scripts/fuzzel/emojis.sh"; }
 
     Mod+A { spawn "hyprpicker" "-a"; }
