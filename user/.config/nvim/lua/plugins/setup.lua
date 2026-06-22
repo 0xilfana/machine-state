@@ -15,13 +15,14 @@ require("toggleterm").setup({})
 -- Mason
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "basedpyright", "ruff", "clangd", "lua_ls", "bash", "json", "css", "html" },
+  ensure_installed = { "basedpyright", "ruff", "clangd", "lua_ls", "bashls", "jsonls", "cssls", "html" },
 })
 
 -- Blink
 require("blink.cmp").setup({
     keymap = {
         preset = "super-tab",
+
     }
 })
 
